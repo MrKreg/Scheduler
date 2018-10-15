@@ -1,0 +1,8 @@
+certifi==2018.8.24
+chardet==3.0.4
+idna==2.7
+pyTelegramBotAPI==3.6.6
+requests==2.19.1
+six==1.11.0
+tabulate==0.8.2
+urllib3==1.23
