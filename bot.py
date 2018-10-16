@@ -1,11 +1,11 @@
 import telebot
 from telebot import types
 from telebot.types import Message
-from TelegaBot import dbWorker
-from TelegaBot.config import *
-from TelegaBot.dbWorker import *
+import dbWorker
+from config import *
 from datetime import datetime
-from decimal import Decimal, ROUND_CEILING
+
+from config import COMMANDS
 
 bot = telebot.TeleBot(TOKEN)
 

@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_CEILING
 import sqlite3
-from TelegaBot.config import DBNAME
+from config import DBNAME
 
 
 class Subject:
