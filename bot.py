@@ -122,4 +122,4 @@ def prepare_schedule(schedule):
     return line
 
 
-bot.polling(timeout=60)
+bot.polling(timeout=40)
