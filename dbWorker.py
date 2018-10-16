@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_CEILING
 import sqlite3
-from config import DBNAME
+from config import *
 
 
 class Subject:
@@ -12,7 +12,7 @@ class Subject:
         self.audit = sub[3]
 
     def __str__(self):
-        return '*' + str(self.number) + ' пара*\n_' + self.name + '_  *' + self.teacher + '* _' + str(
+        return '*' + str(self.number) + ' пара* ' + RINGSCHEDULE[self.number] + '\n_' + self.name + '_  *' + self.teacher + '* _' + str(
             self.audit) + '_\n'
 
 

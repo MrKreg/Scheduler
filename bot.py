@@ -72,7 +72,7 @@ def text_checker(message: Message):
         schedule = dbWorker.get_schedule(message.from_user.id, 1)
         response = prepare_schedule(schedule)
     elif text == 'Розклад дзвінків':
-        response = RINGSCHEDULE
+        response = prepare_ring_schedule()
     else:
         response = 'Така команда мені невідома('
     bot.send_message(message.chat.id, response, parse_mode='Markdown')
@@ -119,6 +119,13 @@ def prepare_schedule(schedule):
     line = ''
     for sub in schedule:
         line += str(sub)
+    return line
+
+
+def prepare_ring_schedule():
+    line = ''
+    for i in range(1, 8):
+        line += '*' + str(i) + ' пара* ' + RINGSCHEDULE[i] + '\n'
     return line
 
 
