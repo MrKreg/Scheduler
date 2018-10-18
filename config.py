@@ -1,3 +1,5 @@
+import pytz
+
 TOKEN = '656003816:AAHATXcjF5-8ckXz-zSa60_NKa9KMJKcs44'
 
 DBNAME = 'telegaBot.db'
@@ -18,4 +20,4 @@ RINGSCHEDULE = {1: '_8:00-9:20_',
                 7: '_17:10-18:30_'
                 }
 
-GROUPS = ['ПІ-15-02', 'ПІ-15-01', 'ПІ-16-01', 'ПІ-16-02']
+UKRAINE = pytz.timezone('Europe/Kiev')
