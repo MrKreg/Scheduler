@@ -66,11 +66,11 @@ def get_schedule(uid, is_tomorrow):
     fac = get_user(uid)
     date = datetime.now(tz=UKRAINE)
     day = date.isoweekday()
-    print(date)
     is_num = is_numeral(date)
     if is_tomorrow:
         day += 1
     if day >= 6:
+        is_num = not is_num
         day = 1
     return select_schedule(fac, day, is_num)
 
@@ -115,4 +115,4 @@ def get_all_groups():
 
 
 def is_numeral(date):
-    return Decimal((date - datetime(2018, 9, 2, tzinfo=UKRAINE)).days / 7).quantize(0, ROUND_CEILING) % 2
+    return (Decimal((date - datetime(2018, 9, 2, tzinfo=UKRAINE)).days / 7).quantize(0, ROUND_CEILING) % 2) and True
