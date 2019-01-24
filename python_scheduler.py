@@ -76,7 +76,7 @@ def get_today_schedule(group_name):
 def get_tomorrow_schedule(group_name):
     weekday = datetime.now(tz=UKRAINE).isoweekday()
     week = get_week(datetime.now(tz=UKRAINE))
-    if weekday > 5:
+    if weekday > 4:
         return 'Пар немає)'
     return get_one_day_schedule(group_name, weekday + 1, week)
 
