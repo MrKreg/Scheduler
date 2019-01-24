@@ -69,21 +69,21 @@ def get_one_day_schedule(group_name, weekday, week):
 def get_today_schedule(group_name):
     weekday = datetime.now(tz=UKRAINE).isoweekday()
     week = get_week(datetime.now(tz=UKRAINE))
-    if weekday > 6:
+    if weekday > 5:
         return 'Пар немає)'
     return get_one_day_schedule(group_name, weekday, week)
     
 def get_tomorrow_schedule(group_name):
     weekday = datetime.now(tz=UKRAINE).isoweekday()
     week = get_week(datetime.now(tz=UKRAINE))
-    if weekday > 6:
+    if weekday > 5:
         return 'Пар немає)'
     return get_one_day_schedule(group_name, weekday + 1, week)
 
 def get_current_week_schedule(group_name):
     weekday = datetime.now(tz=UKRAINE).isoweekday()
     week = get_week(datetime.now(tz=UKRAINE))
-    if weekday > 6:
+    if weekday > 5:
         return 'Пар немає)'
     weekschedule = []
     for i in range(weekday, 6):
